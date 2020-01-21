@@ -22,10 +22,10 @@ repositories {
 **Maven**
 ```xml
 <dependency>
-	    <groupId>com.github.Alireza-Saeedi</groupId>
-	    <artifactId>MegaDialog</artifactId>
-	    <version>1.0.0</version>
-	</dependency>
+	<groupId>com.github.Alireza-Saeedi</groupId>
+	<artifactId>MegaDialog</artifactId>
+	<version>1.0.0</version>
+</dependency>
 ```
 
 
