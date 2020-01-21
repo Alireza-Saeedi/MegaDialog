@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="confirmSuccess">#37c180</color>
+    <color name="confirmError">#e45253</color>
+    <color name="confirmDanger">#E4BB52</color>
+
+</resources>

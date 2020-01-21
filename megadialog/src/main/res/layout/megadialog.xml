@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cardview"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cardview_title"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="title"
+            android:textColor="#000"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animview"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    app:lottie_autoPlay="false"
+                    app:lottie_loop="false" />
+
+                <ImageView
+                    android:id="@+id/customImgView"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:padding="7dp"
+                android:singleLine="true"
+                android:text="description"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:singleLine="true"
+            android:id="@+id/negBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#fff"
+            android:background="@drawable/button_error" />
+
+        <Button
+            android:id="@+id/posBtn"
+            android:singleLine="true"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#fff"
+            android:background="@drawable/button_success" />
+
+    </LinearLayout>
+
+</LinearLayout>
