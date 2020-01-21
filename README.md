@@ -67,8 +67,10 @@ dependencies {
 
 # Types
 ------
+```
 Megadialog.CUSTOM_IMAGE_TYPE
 Megadialog.ERROR_TYPE
 Megadialog.SUCCESS_TYPE
 Megadialog.ERROR_TYPE
 Megadialog.PROGRESS_TYPE
+```
