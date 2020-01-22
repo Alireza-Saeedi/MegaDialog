@@ -78,33 +78,35 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
+        android:orientation="horizontal">
 
         <Button
-            android:singleLine="true"
             android:id="@+id/negBtn"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
+            android:layout_marginLeft="4dp"
             android:layout_marginTop="4dp"
             android:layout_marginRight="4dp"
-            android:layout_marginLeft="4dp"
             android:layout_marginBottom="8dp"
-            android:textColor="#fff"
-            android:background="@drawable/button_error" />
+            android:background="@drawable/button_error"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="#fff" />
 
         <Button
             android:id="@+id/posBtn"
-            android:singleLine="true"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
+            android:layout_marginLeft="4dp"
             android:layout_marginTop="4dp"
             android:layout_marginRight="4dp"
-            android:layout_marginLeft="4dp"
             android:layout_marginBottom="8dp"
-            android:textColor="#fff"
-            android:background="@drawable/button_success" />
+            android:background="@drawable/button_success"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="#fff" />
 
     </LinearLayout>
 

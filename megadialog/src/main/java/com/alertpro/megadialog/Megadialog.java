@@ -16,9 +16,13 @@ import android.widget.TextView;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.airbnb.lottie.LottieComposition;
+import com.airbnb.lottie.LottieDrawable;
+import com.airbnb.lottie.OnCompositionLoadedListener;
 
 /**
  * Created by Alireza saeedi.
@@ -74,6 +78,7 @@ public class Megadialog extends android.app.Dialog {
         rootview.setLayoutParams(params);
 
         animview = findViewById(R.id.animview);
+        // animview.enableMergePathsForKitKatAndAbove(true);
         customImgView = findViewById(R.id.customImgView);
         customImgView.setVisibility(View.GONE);
     }
@@ -102,21 +107,39 @@ public class Megadialog extends android.app.Dialog {
         return AlertType;
     }
 
-    public Megadialog setAlertType(int alertType, Boolean AnimationLoop) {
+    public Megadialog setAlertType(int alertType, final Boolean AnimationLoop) {
         AlertType = alertType;
-
+        final LottieDrawable drawable = new LottieDrawable();
         if (alertType == ERROR_TYPE) {
-            animview.setAnimation(R.raw.unapproved_cross);
-            animview.playAnimation();
-            animview.loop(AnimationLoop);
+            LottieComposition.Factory.fromRawFile(context, R.raw.unapproved_cross, new OnCompositionLoadedListener() {
+                @Override
+                public void onCompositionLoaded(@Nullable LottieComposition composition) {
+                    drawable.setComposition(composition);
+                    drawable.playAnimation();
+                    drawable.loop(AnimationLoop);
+                    animview.setImageDrawable(drawable);
+                }
+            });
         } else if (alertType == SUCCESS_TYPE) {
-            animview.setAnimation(R.raw.success);
-            animview.playAnimation();
-            animview.loop(AnimationLoop);
+            LottieComposition.Factory.fromRawFile(context, R.raw.success, new OnCompositionLoadedListener() {
+                @Override
+                public void onCompositionLoaded(@Nullable LottieComposition composition) {
+                    drawable.setComposition(composition);
+                    drawable.playAnimation();
+                    drawable.loop(AnimationLoop);
+                    animview.setImageDrawable(drawable);
+                }
+            });
         } else if (alertType == PROGRESS_TYPE) {
-            animview.setAnimation(R.raw.custom_loader);
-            animview.playAnimation();
-            animview.loop(AnimationLoop);
+            LottieComposition.Factory.fromRawFile(context, R.raw.custom_loader, new OnCompositionLoadedListener() {
+                @Override
+                public void onCompositionLoaded(@Nullable LottieComposition composition) {
+                    drawable.setComposition(composition);
+                    drawable.playAnimation();
+                    drawable.loop(AnimationLoop);
+                    animview.setImageDrawable(drawable);
+                }
+            });
         } else if (alertType == CUSTOM_IMAGE_TYPE) {
             animview.setVisibility(View.GONE);
             customImgView.setVisibility(View.VISIBLE);
@@ -168,7 +191,6 @@ public class Megadialog extends android.app.Dialog {
         return this;
     }
 
-
     public Megadialog setCancelButton(String text, View.OnClickListener listener) {
         this.negBtn.setText(text);
         this.negBtn.setOnClickListener(listener);
@@ -182,7 +204,6 @@ public class Megadialog extends android.app.Dialog {
         this.posBtn.setVisibility(View.VISIBLE);
         return this;
     }
-
 
     public Megadialog ShowDialog() {
 
