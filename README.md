@@ -22,9 +22,9 @@ repositories {
 **Maven**
 ```xml
 <dependency>
-	<groupId>com.github.Alireza-Saeedi</groupId>
-	<artifactId>MegaDialog</artifactId>
-	<version>1.0.0</version>
+	 <groupId>com.github.Alireza-Saeedi</groupId>
+	 <artifactId>megadialog</artifactId>
+	 <version>1.1.0</version>
 </dependency>
 ```
 
@@ -32,7 +32,7 @@ repositories {
 **Gradle**
 ```gradle
 dependencies {
-	implementation 'com.github.Alireza-Saeedi:MegaDialog:1.0.0'
+	implementation 'com.github.Alireza-Saeedi:megadialog:1.1.0'
 }
 ```
 
