@@ -206,9 +206,7 @@ public class Megadialog extends android.app.Dialog {
     }
 
     public Megadialog ShowDialog() {
-
       /*  if (this.negBtn.getVisibility() == View.VISIBLE && this.posBtn.getVisibility() == View.VISIBLE) {
-
             this.negBtn.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1.0f));
             this.posBtn.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1.0f));
         } else if (this.negBtn.getVisibility() == View.VISIBLE) {
